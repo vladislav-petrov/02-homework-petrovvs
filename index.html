@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Homework #2</title>
+
+    <script type="module" src="./js/controller.js"></script>
   </head>
 
   <body>
@@ -26,15 +28,66 @@
     </header>
 
     <main class="main">
+      <div class="modal">
+        <form class="form">
+          <div class="form__name-block">
+            <label for="name-1" class="form__name-label">Player 1</label>
+            <input id="name-1" class="form__name-input" required />
+          </div>
+
+          <div class="form__name-block">
+            <label for="name-2" class="form__name-label">Player 2</label>
+            <input id="name-2" class="form__name-input" required />
+          </div>
+
+          <div class="form__radio-buttons">
+            <fieldset class="form__radio-buttons-fieldset">
+              <p class="form__radio-buttons-title">Which player starts the game?</p>
+
+              <div class="form__radio-container">
+                <div>
+                  <input
+                    type="radio"
+                    id="player-1"
+                    name="start"
+                    value="player-0"
+                    checked
+                  />
+
+                  <label for="player-1">Player 1</label>
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="player-2"
+                    name="start"
+                    value="player-1"
+                  />
+
+                  <label for="player-2">Player 2</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form__start">
+            <button class="button button-start" type="button">Start</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay"></div>
+
       <div class="wrapper-main">
         <section class="game-state-info">
-          <p class="game-state-info__text">Player 1 turn</p>
+          <p class="game-state-info__text"></p>
         </section>
         
         <section class="playground">
           <div class="playground__cell-container">
             <img
-              id="cell-0"
+              id="cell0"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #1"
@@ -43,7 +96,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-1"
+              id="cell1"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #2"
@@ -52,7 +105,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-2"
+              id="cell2"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #3"
@@ -61,7 +114,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-3"
+              id="cell3"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #4"
@@ -70,7 +123,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-4"
+              id="cell4"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #5"
@@ -79,7 +132,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-5"
+              id="cell5"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #6"
@@ -88,7 +141,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-6"
+              id="cell6"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #7"
@@ -97,7 +150,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-7"
+              id="cell7"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #8"
@@ -106,7 +159,7 @@
 
           <div class="playground__cell-container">
             <img
-              id="cell-8"
+              id="cell8"
               class="playground__cell hidden"
               src="img/cross.png"
               alt="Cell #9"
@@ -115,7 +168,7 @@
         </section>
         
         <seciton class="control-buttons">
-          <button class="control-buttons__new">New game</button>
+          <button class="button button-new">New game</button>
         </seciton>
       </div>
     </main>
